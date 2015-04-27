@@ -1,13 +1,19 @@
-package Question3;
-
-public class Question3 {
-
-	/**
-	 * @param args
-	 */
+public class Thread {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Thread m = Thread.currentThread();
+		Thread11 t1 = new Thread11();
+		t1.start();
+		for(int i=0;i<10;i++){
+			System.out.println("ThreadA");
+			try { Thread.sleep(1000); } catch (Exception e){}
+		}
 	}
-
+}
+class Thread11 extends Thread {
+	public void run(){
+		for(int i=0;i<10;i++){
+			System.out.println("ThreadA");
+			try { Thread.sleep(1000); } catch (Exception e){}
+		}
+	}
 }
